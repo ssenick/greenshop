@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Product View"
+})
+
+<div class="transition ">
+	<span></span><span></span><span></span><span></span><span></span>
+</div>
+<div id="bg"></div>
+
+<body data-barba="wrapper">
+	<div data-barba="container" class="wrapper ">
+		@@include('html/_header.htm',{
+		"home":"",
+		"shop":"_active",
+		"plant":"",
+		"blogs":""
+		})
+		<main class="page page_product-view">
+
+			<!-- breadcrumb  -->
+			<nav class="page__breadcrumb breadcrumb">
+				<div class="breadcrumb__container">
+					<ul class="breadcrumb__list">
+						<li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+						<li class="breadcrumb__item"><a class="breadcrumb__link">Shop</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- breadcrumb -->
+			<!-- product-view -->
+			<section class="page__product-view product-view">
+				<div class="product-view__container">
+					<div class="product-view__wrapper">
+						<div class="product-view__sliders sliders-product">
+							<div class="sliders-product__preview preview-slider">
+								<div class="preview-slider__slider swiper">
+									<div class="preview-slider__wrapper swiper-wrapper">
+										<div class="preview-slider__slide swiper-slide">
+											<div class="preview-slider__image-ibg">
+												<img src="@img/product-view-page/product-slider/01.png" alt="image product">
+											</div>
+										</div>
+										<div class="preview-slider__slide swiper-slide">
+											<div class="preview-slider__image-ibg">
+												<img src="@img/product-view-page/product-slider/04.png" alt="image product">
+											</div>
+										</div>
+										<div class="preview-slider__slide swiper-slide">
+											<div class="preview-slider__image-ibg">
+												<img src="@img/product-view-page/product-slider/01.png" alt="image product">
+											</div>
+										</div>
+										<div class="preview-slider__slide swiper-slide">
+											<div class="preview-slider__image-ibg">
+												<img src="@img/product-view-page/product-slider/04.png" alt="image product">
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="sliders-product__main main-product-slider ">
+								<div class=" main-product-slider__slider swiper">
+									<div class=" main-product-slider__wrapper swiper-wrapper">
+										<div data-medium-zoom class=" main-product-slider__slide swiper-slide">
+											<a data-tagret-zoom href="@img/product-view-page/product-slider/product-card-image-01-big.png" class="main-product-slider__image-ibg">
+												<img src="@img/product-view-page/product-slider/product-card-image-01-big.png" alt="image product">
+											</a>
+										</div>
+										<div data-medium-zoom class=" main-product-slider__slide swiper-slide">
+											<a data-tagret-zoom href="@img/product-view-page/product-slider/product-card-image-02-big.png" class="main-product-slider__image-ibg">
+												<img src="@img/product-view-page/product-slider/product-card-image-02-big.png" alt="image product">
+											</a>
+										</div>
+										<div data-medium-zoom class=" main-product-slider__slide swiper-slide">
+											<a data-tagret-zoom href="@img/product-view-page/product-slider/product-card-image-01-big.png" class="main-product-slider__image-ibg">
+												<img src="@img/product-view-page/product-slider/product-card-image-01-big.png" alt="image product">
+											</a>
+										</div>
+										<div data-medium-zoom class=" main-product-slider__slide swiper-slide">
+											<a data-tagret-zoom href="@img/product-view-page/product-slider/product-card-image-02-big.png" class="main-product-slider__image-ibg">
+												<img src="@img/product-view-page/product-slider/product-card-image-02-big.png" alt="image product">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-view__about about-product-view">
+							<div class="about-product-view__header header-about-product">
+								<div class="header-about-product__name">Barberton Daisy</div>
+								<div class="header-about-product__info">
+									<div class="header-about-product__price">$119.00</div>
+									<div class="header-about-product__rating">
+										<ul class="ratings">
+											<li class="ratings__item _icon-star"></li>
+											<li class="ratings__item _icon-star"></li>
+											<li class="ratings__item _icon-star"></li>
+											<li class="ratings__item _icon-star"></li>
+											<li class="ratings__item ratings__item_gray _icon-star"></li>
+											<li class="ratings__value">4.8</li>
+										</ul>
+										<span class="header-about-product__review">19 <span>Customer Review</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="about-product-view__descr">
+								<div class="about-product-view__label">Short Description:</div>
+								<p class="about-product-view__text">The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground.</p>
+							</div>
+							<form action="#" class="about-product-view__values values-about-product">
+								<div class="values-about-product__label about-product-view__label">Size:</div>
+								<div class="values-about-product__size size-value-product">
+									<div class="size-value-product__line">
+										<input id="c_s" class="size-value-product__input" checked type="radio" value="s-size" name="form[]">
+										<label for="c_s" class="size-value-product__label"><span class="size-value-product__text">S</span></label>
+									</div>
+									<div class="size-value-product__line">
+										<input id="c_m" class="size-value-product__input" type="radio" value="m-size" name="form[]">
+										<label for="c_m" class="size-value-product__label"><span class="size-value-product__text">M</span></label>
+									</div>
+									<div class="size-value-product__line">
+										<input id="c_l" class="size-value-product__input" type="radio" value="l-size" name="form[]">
+										<label for="c_l" class="size-value-product__label"><span class="size-value-product__text">L</span></label>
+									</div>
+									<div class="size-value-product__line">
+										<input id="c_xl" class="size-value-product__input" type="radio" value="xl-size" name="form[]">
+										<label for="c_xl" class="size-value-product__label"><span class="size-value-product__text">XL</span></label>
+									</div>
+								</div>
+								<div class="values-about-product__actions actions-value-product">
+									<div class="actions-value-product__quantity">
+										<div data-quantity class="quantity">
+											<div data-quantity-minus class="quantity__button quantity__button_minus"></div>
+											<div class="quantity__input">
+												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+											</div>
+											<div data-quantity-plus class="quantity__button quantity__button_plus">+</div>
+										</div>
+									</div>
+									<button type="button" class=" actions-value-product__btn button">Buy NOW</button>
+									<button type="button" class=" actions-value-product__add button button_border">Add to cart</button>
+									<label class="actions-value-product__like ">
+										<input class="actions-value-product__input" type="checkbox" value="1" name="form[]">
+										<span class="actions-value-product__icon _icon-heart"></span>
+									</label>
+								</div>
+							</form>
+							<div class="about-product-view__items">
+								<div class="about-product-view__item"><span>SKU: </span>1995751877966</div>
+								<div class="about-product-view__item"><span>Categories: </span>Potter Plants</div>
+								<div class="about-product-view__item"><span>Tags: </span>Home, Garden, Plants</div>
+							</div>
+							<div class="about-product-view__share share-about-product">
+								<div class="share-about-product__label">Share this products:</div>
+								<ul class="share-about-product__items">
+									<li class="share-about-product__item"><a href="#" class="share-about-product__link _icon-facebook"></a></li>
+									<li class="share-about-product__item"><a href="#" class="share-about-product__link _icon-twitter"></a></li>
+									<li class="share-about-product__item"><a href="#" class="share-about-product__link _icon-linkedin"></a></li>
+									<li class="share-about-product__item"><a href="#" class="share-about-product__link _icon-message"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- product-view -->
+			<!-- about-product -->
+			<section class="page__about-product about-product">
+				<div class="about-product__container">
+					<div data-tabs data-tabs-animate="800" class="about-product__wrapper">
+						<nav data-filter data-tabs-titles class="about-product__navigation">
+							<button data-target-link type="button" class="about-product__title _tab-active">Product Description</button>
+							<button data-target-link type="button" class="about-product__title">Reviews (19)</button>
+							<span data-target-move></span>
+						</nav>
+						<div data-tabs-body class="about-product__content">
+							<div class="about-product__body">
+								<div class="about-product__descr">
+									<p>The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
+									<p>Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground.</p>
+								</div>
+								<div class="about-product__item">
+									<div class="about-product__label">Living Room:</div>
+									<div class="about-product__descr">
+										<p>The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</div>
+								</div>
+								<div class="about-product__item">
+									<div class="about-product__label">Dining Room:</div>
+									<div class="about-product__descr">
+										<p>The benefits of houseplants are endless. In addition to cleaning the air of harmful toxins, they can help to improve your mood, reduce stress and provide you with better sleep. Fill every room of your home with houseplants and their restorative qualities will improve your life.</p>
+									</div>
+								</div>
+								<div class="about-product__item">
+									<div class="about-product__label">Office:</div>
+									<div class="about-product__descr">
+										<p>The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</div>
+								</div>
+							</div>
+							<div class="about-product__body">
+								<div class="about-product__item">
+									<div class="about-product__label">Anton Ber:</div>
+									<div class="about-product__descr">
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam neque fuga eius modi natus exercitationem nesciunt molestias porro quis? Officiis error exercitationem voluptate perspiciatis doloribus dolor excepturi laudantium facere fugit.</p>
+									</div>
+								</div>
+								<div class="about-product__item">
+									<div class="about-product__label">Dimon Ssaas:</div>
+									<div class="about-product__descr">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat omnis rem doloremque, similique, officiis saepe ex, sed optio dicta dolorem. Magni, vero voluptatibus voluptates repellendus doloribus nobis consequatur saepe.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat omnis rem doloremque, similique, officiis saepe ex, sed optio dicta dolorem. Magni, vero voluptatibus voluptates repellendus doloribus nobis consequatur saepe.</p>
+									</div>
+								</div>
+								<div class="about-product__item">
+									<div class="about-product__label">Anna Ashas:</div>
+									<div class="about-product__descr">
+										<p>The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- about-product -->
+			<!-- releted-products -->
+			<section class="page__releted-products releted-products">
+				<div class=" releted-products__container _container">
+					<h3 class="releted-products__title">Releted Products</h3>
+					<div class="releted-products__slider swiper">
+						<div class="releted-products__wrapper swiper-wrapper">
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/01.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-01-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Barberton Daisy</a>
+								<div class="item-catalog__price">$119.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/02.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-02-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Angel Wing Begonia</a>
+								<div class="item-catalog__price">$169.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/03.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-03-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+
+								</div>
+								<a href="#" class="item-catalog__name">African Violet</a>
+								<div class="item-catalog__price">$199.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/04.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-04-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Beach Spider Lily</a>
+								<div class="item-catalog__price">$127.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/05.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-05-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Blushing Bromeliad</a>
+								<div class="item-catalog__price">$139.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/06.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-06-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Aluminum Plant</a>
+								<div class="item-catalog__price">$170.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/07.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-07-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+
+								</div>
+								<a href="#" class="item-catalog__name">Bird's Nest Fern</a>
+								<div class="item-catalog__price">$199.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/08.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-08-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Broadleaf Lady Palm</a>
+								<div class="item-catalog__price">$59.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/09.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-09-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Chinese Evergreen</a>
+								<div class="item-catalog__price">$39.00</div>
+							</div>
+						</div>
+					</div>
+					<div class="releted-products__pagination pagination swiper-pagination"></div>
+				</div>
+			</section>
+			<!-- releted-products -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

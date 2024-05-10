@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Product Cart"
+})
+<div class="transition is-active">
+	<span></span><span></span><span></span><span></span><span></span>
+</div>
+<div id="bg"></div>
+
+<body data-barba="wrapper">
+	<div data-barba="container" class="wrapper">
+		@@include('html/_header.htm',{
+		"home":"",
+		"shop":"",
+		"plant":"",
+		"blogs":"_active"
+		})
+		<main class="page page_product-view">
+
+			<!-- breadcrumb  -->
+			<nav class="page__breadcrumb breadcrumb">
+				<div class="breadcrumb__container">
+					<ul class="breadcrumb__list">
+						<li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+						<li class="breadcrumb__item"><a href="product-view.html" class="breadcrumb__link">Shop</a></li>
+						<li class="breadcrumb__item"><a class="breadcrumb__link"> Shopping Cart</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- breadcrumb -->
+			<!-- product-cart -->
+			<section class="page__product-cart product-cart">
+				<div class=" product-cart__container">
+					<div class="product-cart__wrapper">
+						<div class="product-cart__products products-items">
+							<!-- row -->
+							<div class="products-items__row">
+								<div class="products-items__title">Products</div>
+								<div class="products-items__title">Price</div>
+								<div class="products-items__title">Quantity</div>
+								<div class="products-items__title">Total</div>
+							</div>
+							<!-- row -->
+							<!-- row -->
+							<div class="products-items__row">
+								<div class="products-items__product product">
+									<a href="#" class="product__image-ibg">
+										<img src="@img/catalog/01.png" alt="image product">
+									</a>
+									<div class="product__info">
+										<a href="#" class="product__name">Barberton Daisy</a>
+										<div class="product__sku"><span>SKU: </span>1995751877966</div>
+									</div>
+								</div>
+								<div class="products-items__price"><span>Price:</span>$119.00</div>
+								<div class="products-items__quantity">
+									<span>Quantity:</span>
+									<div data-quantity class="quantity">
+										<div data-quantity-minus class="quantity__button quantity__button_minus"></div>
+										<div class="quantity__input">
+											<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+										</div>
+										<div data-quantity-plus class="quantity__button quantity__button_plus">+</div>
+									</div>
+								</div>
+								<div class="products-items__full">
+									<div class="products-items__total"><span>Total:</span>$238.00</div>
+									<div class="products-items__delete">
+										<a href="#" class="products-items__btn">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g id="Iconly/Curved/Delete">
+													<g id="Delete">
+														<path id="Stroke 1" d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path id="Stroke 3" d="M20.3651 6.47979H4.2146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path id="Stroke 5" d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</g>
+												</g>
+											</svg>
+
+										</a>
+									</div>
+								</div>
+
+							</div>
+							<!-- row -->
+							<!-- row -->
+							<div class="products-items__row">
+								<div class="products-items__product product">
+									<a href="#" class="product__image-ibg">
+										<img src="@img/catalog/03.png" alt="image product">
+									</a>
+									<div class="product__info">
+										<a href="#" class="product__name">Blushing Bromeliad</a>
+										<div class="product__sku"><span>SKU: </span>1995751877222</div>
+									</div>
+								</div>
+								<div class="products-items__price"><span>Price:</span>$139.00</div>
+								<div class="products-items__quantity">
+									<span>Quantity</span>
+									<div data-quantity class="quantity">
+										<div data-quantity-minus class="quantity__button quantity__button_minus"></div>
+										<div class="quantity__input">
+											<input data-quantity-value autocomplete="off" type="text" name="form[]" value="3">
+										</div>
+										<div data-quantity-plus class="quantity__button quantity__button_plus">+</div>
+									</div>
+								</div>
+								<div class="products-items__full">
+									<div class="products-items__total"> <span>Total:</span>$417.00</div>
+									<div class="products-items__delete">
+										<a href="#" class="products-items__btn">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g id="Iconly/Curved/Delete">
+													<g id="Delete">
+														<path id="Stroke 1" d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path id="Stroke 3" d="M20.3651 6.47979H4.2146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path id="Stroke 5" d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</g>
+												</g>
+											</svg>
+
+										</a>
+									</div>
+								</div>
+
+							</div>
+							<!-- row -->
+							<!-- row -->
+							<div class="products-items__row">
+								<div class="products-items__product product">
+									<a href="#" class="product__image-ibg">
+										<img src="@img/catalog/05.png" alt="image product">
+									</a>
+									<div class="product__info">
+										<a href="#" class="product__name">Aluminum Plant</a>
+										<div class="product__sku"><span>SKU: </span>1995751877112</div>
+									</div>
+								</div>
+								<div class="products-items__price"><span>Price:</span>$179.00</div>
+								<div class="products-items__quantity">
+									<span>Quantity:</span>
+									<div data-quantity class="quantity">
+										<div data-quantity-minus class="quantity__button quantity__button_minus"></div>
+										<div class="quantity__input">
+											<input data-quantity-value autocomplete="off" type="text" name="form[]" value="9">
+										</div>
+										<div data-quantity-plus class="quantity__button quantity__button_plus">+</div>
+									</div>
+								</div>
+								<div class="products-items__full">
+									<div class="products-items__total"><span>Total:</span>$1,611.00</div>
+									<div class="products-items__delete">
+										<a href="#" class="products-items__btn">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g id="Iconly/Curved/Delete">
+													<g id="Delete">
+														<path id="Stroke 1" d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path id="Stroke 3" d="M20.3651 6.47979H4.2146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path id="Stroke 5" d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</g>
+												</g>
+											</svg>
+
+										</a>
+									</div>
+								</div>
+
+							</div>
+							<!-- row -->
+						</div>
+						<div class="product-cart__total cart-total">
+							<div class="cart-total__header">
+								<h3 class="cart-total__title">Cart Totals</h3>
+							</div>
+							<div class="cart-total__body">
+								<form action="#" class="cart-total__form form-cart-total">
+									<label class="form-cart-total__title">Coupon Apply</label>
+									<div class="form-cart-total__line">
+										<input data-required autocomplete="off" type="text" name="form[]" placeholder="Enter coupon code here..." class="form-cart-total__input" data-placeholder="enter your email address...">
+										<button type="submit" class="form-cart-total__button">Join</button>
+									</div>
+								</form>
+								<div class="cart-total__row">
+									<div class="cart-total__wrapper">
+										<span class="cart-total__label">Subtotal</span>
+										<span class="cart-total__value">$2,683.00</span>
+									</div>
+								</div>
+								<div class="cart-total__row">
+									<div class="cart-total__wrapper">
+										<span class="cart-total__label">Coupon Discount</span>
+										<span class="cart-total__value cart-total__value_small">(-) 00.00</span>
+									</div>
+								</div>
+								<div class="cart-total__row">
+									<div class="cart-total__wrapper">
+										<span class="cart-total__label">Shiping</span>
+										<span class="cart-total__value">$16.00</span>
+									</div>
+									<a href="#" class="cart-total__link">View shipping charge</a>
+								</div>
+								<div class="cart-total__row cart-total__row_total">
+									<div class="cart-total__wrapper">
+										<span class="cart-total__label cart-total__label_total">Total</span>
+										<span class="cart-total__value cart-total__value_total">$2,683.00</span>
+									</div>
+								</div>
+							</div>
+							<div class="cart-total__footer">
+								<a href="#" class="cart-total__button button _fw">Proceed To Checkout</a>
+								<a href="#" class="cart-total__link cart-total__link_big">Continue Shopping</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- product-cart -->
+
+			<!-- releted-products -->
+			<section class="page__releted-products releted-products">
+				<div class=" releted-products__container _container">
+					<h3 class="releted-products__title">You may be interested in</h3>
+					<div class="releted-products__slider swiper">
+						<div class="releted-products__wrapper swiper-wrapper">
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/01.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-01-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Barberton Daisy</a>
+								<div class="item-catalog__price">$119.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/02.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-02-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Angel Wing Begonia</a>
+								<div class="item-catalog__price">$169.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/03.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-03-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+
+								</div>
+								<a href="#" class="item-catalog__name">African Violet</a>
+								<div class="item-catalog__price">$199.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/04.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-04-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Beach Spider Lily</a>
+								<div class="item-catalog__price">$127.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/05.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-05-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Blushing Bromeliad</a>
+								<div class="item-catalog__price">$139.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/06.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-06-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Aluminum Plant</a>
+								<div class="item-catalog__price">$170.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/07.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-07-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+
+								</div>
+								<a href="#" class="item-catalog__name">Bird's Nest Fern</a>
+								<div class="item-catalog__price">$199.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/08.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-08-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Broadleaf Lady Palm</a>
+								<div class="item-catalog__price">$59.00</div>
+							</div>
+							<div data-medium-zoom class="releted-products__slide swiper-slide item-catalog">
+								<div class="item-catalog__body">
+									<a href="#" class="item-catalog__image">
+										<img src="@img/catalog/09.png" alt=" iamge product">
+									</a>
+									<div class="item-catalog__actions actions-item">
+										<a href="#" class="actions-item__link _icon-cart"></a>
+										<a href="#" class="actions-item__link _icon-heart"></a>
+										<a data-tagret-zoom href="@img/catalog/product-card-image-09-big.jpeg" class="actions-item__link _icon-search"></a>
+									</div>
+								</div>
+								<a href="#" class="item-catalog__name">Chinese Evergreen</a>
+								<div class="item-catalog__price">$39.00</div>
+							</div>
+						</div>
+					</div>
+					<div class="releted-products__pagination pagination swiper-pagination"></div>
+				</div>
+			</section>
+			<!-- releted-products -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

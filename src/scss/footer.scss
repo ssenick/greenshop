@@ -1,0 +1,295 @@
+//====================================================================================================
+.footer {
+	// .footer__container
+	&__container {
+	}
+	// .footer__join
+	&__join {
+	}
+	// .footer__contacts
+	&__contacts {
+	}
+	// .footer__bottom
+	&__bottom {
+	}
+	// .footer__copyright
+	&__copyright {
+		padding-top: rem(7);
+		padding-bottom: rem(13);
+		@include adaptiveValue("font-size", 14, 12);
+		line-height: math.div(30px, 14px) * 100%;
+		color: $black-light;
+		text-align: center;
+	}
+}
+
+.contacts-footer {
+	background-color: $green-opacity-01;
+	border-top: rem(1) solid $green-opacity-01;
+	border-bottom: rem(1) solid $green-opacity-01;
+	@include adaptiveValue("padding", 25, 15);
+	display: flex;
+	flex-wrap: wrap;
+	@include adaptiveValue("column-gap", 60, 30);
+	row-gap: rem(20);
+	align-items: center;
+	@media (max-width: $pc) {
+		margin: 0rem rem(-24);
+		@include adaptiveValue("padding-left", 24, 15);
+		@include adaptiveValue("padding-right", 24, 15);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("padding-left", 24, 25);
+		@include adaptiveValue("padding-right", 24, 25);
+	}
+	// .contacts-footer__logo
+	&__logo {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-right", 17, 0);
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+	// .contacts-footer__item
+	&__item {
+		display: flex;
+		align-items: center;
+		max-width: rem(200);
+		img {
+			margin-right: rem(9);
+			max-width: 100%;
+			@media (max-width: $mobile) {
+				max-width: rem(18);
+			}
+		}
+		&::before {
+			margin-right: rem(9);
+			font-size: rem(20);
+			color: $green-main;
+			@media (max-width: $mobile) {
+				font-size: 18px;
+			}
+		}
+		line-height: math.div(22px, 14px) * 100%;
+		@include adaptiveValue("font-size", 14, 12);
+		color: $black-light;
+	}
+	// .contacts-footer__link
+	&__link {
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green-main;
+			}
+		}
+	}
+}
+//=================================
+
+//====================================================================================================
+.bottom-footer {
+	background-color: $bg-gray;
+	@include adaptiveValue("padding", 25, 20);
+	border-bottom: rem(1) solid $green-opacity-01;
+	@media (max-width: $pc) {
+		margin: 0rem rem(-24);
+		@include adaptiveValue("padding-left", 24, 15);
+		@include adaptiveValue("padding-right", 24, 15);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("padding-left", 24, 25);
+		@include adaptiveValue("padding-right", 24, 25);
+	}
+	// .bottom-footer__body
+	&__body {
+	}
+	// .bottom-footer__menu
+	&__menu {
+	}
+}
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: rem(20);
+	@media (max-width: $tablet) {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: rem(30);
+	}
+	@media (max-width: em(539)) {
+		grid-template-columns: 1fr;
+		row-gap: rem(12);
+	}
+	// .menu-footer__column
+	&__column {
+		// .menu-footer__column_socials
+		&_socials {
+		}
+	}
+	// .menu-footer__title
+	&__title {
+		font-weight: 700;
+		font-size: rem(18);
+		color: $black-light;
+		pointer-events: none;
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+		@media (max-width: em(539)) {
+			&[data-spoller] {
+				pointer-events: painted;
+				display: flex;
+				flex-direction: row-reverse;
+				width: 100%;
+				justify-content: space-between;
+				margin-bottom: rem(8);
+				position: relative;
+				&::before {
+					content: "";
+					flex: 0 0 rem(20);
+					width: rem(20);
+					height: rem(20);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background: url("@img/svg/arrow-down.svg") center center / 100% no-repeat;
+					transition: transform 0.3s ease 0s;
+				}
+				&._spoller-active {
+					&::before {
+						transform: rotate(-180deg);
+					}
+				}
+			}
+		}
+		// .menu-footer__title_payments
+		&_payments {
+			@media (max-width: em(539)) {
+				padding-top: rem(15);
+				text-align: center;
+			}
+		}
+	}
+	// .menu-footer__list
+	&__list {
+	}
+	// .menu-footer__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: rem(14);
+		}
+	}
+	// .menu-footer__link
+	&__link {
+		line-height: math.div(17px, 14px) * 100%;
+		color: $black-light;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green-main;
+			}
+		}
+	}
+	// .menu-footer__social-links
+	&__social-links {
+		&:not(:last-child) {
+			margin-bottom: rem(33);
+		}
+	}
+	// .menu-footer__block-socials
+	&__block-socials {
+		display: flex;
+		gap: rem(10);
+	}
+	// .menu-footer__social-link
+	&__social-link {
+		overflow: hidden;
+		border: rem(1) solid $green-opacity-02;
+		border-radius: rem(4);
+		flex: 0 0 rem(30);
+		width: rem(30);
+		height: rem(30);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s ease 0s;
+		svg {
+			fill: $green-main;
+			opacity: 0.6;
+			transition: opacity 1s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: rem(1) solid $green-main;
+				svg {
+					animation: toRightFromLeft 0.5s forwards, opacityLink 0.3s forwards 0.3s;
+				}
+			}
+		}
+	}
+	// .menu-footer__payments
+	&__payments {
+	}
+	// .menu-footer__block-payments
+	&__block-payments {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(8);
+	}
+	// .menu-footer__payment-link
+	&__payment-link {
+		flex: 0 0 rem(60);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		padding: rem(3) rem(5);
+		img {
+			max-width: 100%;
+			transition: transform 0.3s ease 0s;
+		}
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.3;
+			transition: transform 0.3s ease 0s;
+		}
+		&::after {
+			border-top: rem(1) solid $green-main;
+			border-bottom: rem(1) solid $green-main;
+			transform: scaleX(0);
+		}
+		&::before {
+			border-left: rem(1) solid $green-main;
+			border-right: rem(1) solid $green-main;
+			transform: scaleY(0);
+			transform: transform 1s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					transform: scaleX(1);
+				}
+				&::before {
+					transform: scaleY(1);
+				}
+			}
+		}
+		@media (max-width: em(539)) {
+			flex: 0 1 22%;
+		}
+	}
+}
+@keyframes opacityLink {
+	0% {
+		opacity: 0.6;
+	}
+	100% {
+		opacity: 1;
+	}
+}

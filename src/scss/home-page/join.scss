@@ -1,0 +1,221 @@
+.join {
+	// .join__container
+	&__container {
+	}
+	// .join__body
+	&__body {
+		display: flex;
+		background-color: $bg-gray;
+		@include adaptiveValue("padding", 25, 15);
+		@media (max-width: $pc) {
+			margin: 0rem rem(-24);
+			@include adaptiveValue("padding-left", 24, 15);
+			@include adaptiveValue("padding-right", 24, 15);
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("padding-left", 24, 30);
+			@include adaptiveValue("padding-right", 24, 30);
+		}
+		@media (max-width: $pc) {
+			display: block;
+		}
+		@media (max-width: $mobile) {
+			background-color: $bg-main;
+			padding: 0;
+		}
+	}
+	// .join__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: rem(30);
+		flex: 1 1 auto;
+		@media (max-width: $pc) {
+			&:not(:last-child) {
+				&:not(:last-child) {
+					@include adaptiveValue("margin-bottom", 60, 15);
+				}
+			}
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+	// .join__item
+	&__item {
+		position: relative;
+		padding-right: rem(20);
+		&:not(:last-child) {
+			&::before {
+				content: "";
+				width: rem(1);
+				height: 100%;
+				background-color: $green-opacity-01;
+				position: absolute;
+				right: 0;
+			}
+		}
+		@media (max-width: $mobile) {
+			&::before {
+				content: "";
+				width: 100%;
+				height: rem(1);
+				background-color: $green-opacity-01;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+			&:not(:last-child) {
+				&::before {
+					content: "";
+					width: 100%;
+					height: rem(1);
+					background-color: $green-opacity-01;
+					position: absolute;
+					right: 0;
+					bottom: 0;
+				}
+			}
+		}
+	}
+	// .join__form
+	&__form {
+		flex: 1 0 36%;
+		@include adaptiveValue("padding-left", 62, 20, 1440, 1248, 1);
+		@media (max-width: $pc) {
+			padding-left: 0;
+		}
+		@media (max-width: $mobile) {
+			position: relative;
+			&::before {
+				content: "";
+				width: 100%;
+				height: rem(1);
+				background-color: $green-opacity-01;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+}
+.item-join {
+	// .item-join__image
+	&__image {
+		display: flex;
+		&:not(:last-child) {
+			margin-bottom: rem(14);
+		}
+		max-height: rem(90);
+		img {
+			max-width: 100%;
+		}
+		@media (max-width:$mobile){
+			 justify-content: center; 
+		}
+	}
+	// .item-join__title
+	&__title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 17, 16);
+		line-height: math.div(19px, 17px) * 100%;
+		color: $black-light;
+		&:not(:last-child) {
+			margin-bottom: rem(9);
+		}
+	}
+	// .item-join__descr
+	&__descr {
+		line-height: math.div(22px, 14px) * 100%;
+	}
+	@media (max-width: $mobile) {
+		background-color: $bg-gray;
+		padding: rem(15) rem(25);
+		text-align: center;
+	}
+}
+.form-join {
+	max-width: rem(450);
+	// .form-join__title
+	&__title {
+		display: block;
+		font-weight: 700;
+		font-size: rem(18);
+		color: $black-light;
+
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+	// .form-join__line
+	&__line {
+		display: flex;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 17, 12);
+		}
+	}
+	// .form-join__input
+	&__input {
+		flex: 1 1 auto;
+		border-radius: rem(6) 0 0 rem(6);
+		display: block;
+		min-height: rem(40);
+		padding: rem(3) rem(10);
+		transition: all 0.3s ease 0s;
+		outline: none;
+		border: rem(1) solid transparent;
+		&::placeholder {
+			color: $gray-a5;
+		}
+		&:focus {
+			border: rem(1) solid $green-main !important;
+			color: $black-light;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: rem(1) solid $green-opacity;
+			}
+		}
+		&._form-focus {
+		}
+		&._form-error {
+			border: rem(1) solid $error;
+		}
+	}
+	// .form-join__button
+	&__button {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 18, 16);
+		padding: rem(5) rem(25);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100%;
+		background-color: $bg-main;
+		background-color: $green-main;
+		color: $bg-main;
+		border-radius: 0 rem(6) rem(6) 0;
+		transition: all 0.3s ease 0s;
+		border: rem(2) solid transparent;
+		@media (max-width: $mobile) {
+			padding: rem(5) rem(15);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: rem(2) solid $black-light;
+				color: $black-light;
+				background-color: transparent;
+			}
+		}
+	}
+	// .form-join__text
+	&__text {
+		font-size: rem(13);
+		line-height: math.div(22px, 13px) * 100%;
+	}
+	@media (max-width: $mobile) {
+		background-color: $bg-gray;
+		max-width: none;
+		padding: rem(15) rem(25);
+	}
+}

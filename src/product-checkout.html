@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Product Cart"
+})
+<div class="transition is-active">
+	<span></span><span></span><span></span><span></span><span></span>
+</div>
+<div id="bg"></div>
+
+<body data-barba="wrapper">
+	<div data-barba="container" class="wrapper">
+		@@include('html/_header.htm',{
+		"home":"",
+		"shop":"",
+		"plant":"_active",
+		"blogs":""
+		})
+
+
+		<main class="page page_checkout">
+			<!-- breadcrumb  -->
+			<nav class="page__breadcrumb breadcrumb">
+				<div class="breadcrumb__container">
+					<ul class="breadcrumb__list">
+						<li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+						<li class="breadcrumb__item"><a href="product-view.html" class="breadcrumb__link">Shop</a></li>
+						<li class="breadcrumb__item"><a class="breadcrumb__link">Checkout</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- breadcrumb -->
+			<!-- checkout -->
+			<section class="page__checkout checkout">
+				<div class="checkout__container">
+					<form action="#" class="checkout__form form-checkout">
+						<div class="form-checkout__address-billing billing-address">
+							<h3 class="billing-address__title">Billing Address</h3>
+							<div class="billing-address__row">
+								<div class="billing-address__input">
+									<label for="add_1" class="billing-address__label billing-address__label_required">First Name</label>
+									<input id="add_1" data-required autocomplete="off" type="text" name="form[]" class="input">
+								</div>
+								<div class="billing-address__input">
+									<label for="add_2" class="billing-address__label billing-address__label_required">Last Name</label>
+									<input id="add_2" data-required autocomplete="off" type="text" name="form[]" class="input">
+								</div>
+							</div>
+							<div class="billing-address__row">
+								<div class="billing-address__select">
+									<label class="billing-address__label billing-address__label_required">Country / Region</label>
+									<select data-required="" data-class-modif="billing" name="form[]" class="form">
+										<option value="">Select a country / region</option>
+										<option value="1">California</option>
+										<option value="2">Pensilvania</option>
+										<option value="3">Texas</option>
+										<option value="4">Washington</option>
+										<option value="4">New York</option>
+									</select>
+								</div>
+								<div class="billing-address__input">
+									<label for="add_4" class="billing-address__label billing-address__label_required">Town / City</label>
+									<input id="add_4" data-required autocomplete="off" type="text" name="form[]" class="input">
+								</div>
+							</div>
+							<div class="billing-address__row">
+								<div class="billing-address__input">
+									<label for="add_5" class="billing-address__label billing-address__label_required">Street Address</label>
+									<input id="add_5" placeholder="House number and street name" data-required autocomplete="off" type="text" name="form[]" class="input">
+								</div>
+								<div class="billing-address__input">
+									<input autocomplete="off" type="text" name="form[]" placeholder="Appartment, suite, unit, etc. (optional)" class="input">
+								</div>
+							</div>
+							<div class="billing-address__row">
+								<div class="billing-address__select">
+									<label class="billing-address__label billing-address__label_required">State</label>
+									<select data-required="" data-class-modif="billing" name="form[]" class="form">
+										<option value="">Select a state</option>
+										<option value="1">California</option>
+										<option value="2">Pensilvania</option>
+										<option value="3">Texas</option>
+										<option value="4">Washington</option>
+										<option value="4">New York</option>
+									</select>
+								</div>
+								<div class="billing-address__input">
+									<label for="add_7" class="billing-address__label billing-address__label_required">Zip</label>
+									<input id="add_7" data-required autocomplete="off" type="text" name="form[]" class="input">
+								</div>
+							</div>
+							<div class="billing-address__row">
+								<div class="billing-address__input">
+									<label for="add_8" class="billing-address__label billing-address__label_required">Email address</label>
+									<input id="add_8" data-required="email" autocomplete="off" type="text" name="form[]" class="input">
+								</div>
+								<div class="billing-address__phone">
+									<label class="billing-address__label billing-address__label_required">Phone Number</label>
+									<div class="billing-address__box">
+										<div class="billing-address__select">
+											<select data-required="" data-class-modif="billing" name="form[]" class="form">
+												<option value="1" selected="selected">+966</option>
+												<option value="2">+877</option>
+												<option value="3">+554</option>
+												<option value="4">+545</option>
+											</select>
+										</div>
+										<input data-required="" autocomplete="off" type="tel" name="form[]" class="input">
+									</div>
+
+								</div>
+
+
+							</div>
+							<div class="billing-address__row billing-address__row_no-grid">
+								<div data-spollers class="billing-address__spoller ">
+									<div class="billing-address__item">
+										<button type="button" data-spoller class="billing-address__spoller-title">Ship to a different address?</button>
+										<div class="billing-address__spoller-body">
+											<div class="billing-address__row">
+												<div class="billing-address__select">
+													<label class="billing-address__label">Country </label>
+													<select data-class-modif="billing" name="form[]" class="form">
+														<option value="">Select a country </option>
+														<option value="1">Ukraine</option>
+														<option value="2">USA</option>
+														<option value="3">China</option>
+													</select>
+												</div>
+												<div class="billing-address__input">
+													<label for="add_14" class="billing-address__label ">Town / City</label>
+													<input id="add_14" autocomplete="off" type="text" name="form[]" class="input">
+												</div>
+											</div>
+											<div class="billing-address__row">
+												<div class="billing-address__input">
+													<label for="add_15" class="billing-address__label ">Street Address</label>
+													<input id="add_15" autocomplete="off" type="text" name="form[]" class="input">
+												</div>
+												<div class="billing-address__input">
+													<input autocomplete="off" type="text" name="form[]" class="input">
+												</div>
+											</div>
+											<div class="billing-address__row">
+												<div class="billing-address__select">
+													<label class="billing-address__label ">State</label>
+													<select data-class-modif="billing" name="form[]" class="form">
+														<option value="">Select a state</option>
+														<option value="1">California</option>
+														<option value="2">Pensilvania</option>
+														<option value="3">Texas</option>
+														<option value="4">Washington</option>
+														<option value="4">New York</option>
+													</select>
+												</div>
+												<div class="billing-address__input">
+													<label for="add_17" class="billing-address__label ">Zip</label>
+													<input id="add_17" autocomplete="off" type="text" name="form[]" class="input">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="billing-address__row">
+								<div class="billing-address__input">
+									<label for="add_16" class="billing-address__label">Order notes (optional)</label>
+									<textarea id="add_16" autocomplete="off" name="form[]" placeholder="" class=" input"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="form-checkout__order your-order">
+							<h3 class="your-order__title">Your Order</h3>
+							<div class="your-order__products products-order">
+								<div class="products-order__header">
+									<div class="products-order__label">Products</div>
+									<div class="products-order__label">Subtotal</div>
+								</div>
+								<div class="products-order__items">
+									<div class="products-order__item item-products-order">
+										<div class="item-products-order__main">
+											<div class="item-products-order__image-ibg">
+												<img src="@img/catalog/01.png" alt="image product">
+											</div>
+											<div class="item-products-order__info">
+												<h4 class="item-products-order__name">Barberton Daisy</h4>
+												<div class="item-products-order__sku"><span>SKU: </span>1995751877112</div>
+											</div>
+										</div>
+										<div class="item-products-order__amount">(x 1)</div>
+										<div class="item-products-order__subtotal">$834.00</div>
+									</div>
+									<div class="products-order__item item-products-order">
+										<div class="item-products-order__main">
+											<div class="item-products-order__image-ibg">
+												<img src="@img/catalog/02.png" alt="image product">
+											</div>
+											<div class="item-products-order__info">
+												<h4 class="item-products-order__name">Blushing Bromeliad</h4>
+												<div class="item-products-order__sku"><span>SKU: </span>1995751877112</div>
+											</div>
+										</div>
+										<div class="item-products-order__amount">(x 6)</div>
+										<div class="item-products-order__subtotal">$238.00</div>
+									</div>
+									<div class="products-order__item item-products-order">
+										<div class="item-products-order__main">
+											<div class="item-products-order__image-ibg">
+												<img src="@img/catalog/03.png" alt="image product">
+											</div>
+											<div class="item-products-order__info">
+												<h4 class="item-products-order__name">Aluminum Plant</h4>
+												<div class="item-products-order__sku"><span>SKU: </span>1995751877112</div>
+											</div>
+										</div>
+										<div class="item-products-order__amount">(x 2)</div>
+										<div class="item-products-order__subtotal">$1,611.00</div>
+									</div>
+								</div>
+								<div class="products-order__payment payment-products">
+									<div class="payment-products__total total-price-order">
+										<span class="total-price-order__coupon">Have a coupon code? <a href="#">Click here</a></span>
+										<div class="total-price-order__price-breakdon breakdown-price">
+											<div class="breakdown-price__row breakdown-price__row_subtotal">
+												<div class="breakdown-price__name">Subtotal</div>
+												<div class="breakdown-price__value">$2,683.00</div>
+											</div>
+											<div class="breakdown-price__row breakdown-price__row_coupon">
+												<div class="breakdown-price__name">Coupon Discount</div>
+												<div class="breakdown-price__value breakdown-price__value_coupon"><span>(-) </span>00.00</div>
+											</div>
+											<div class="breakdown-price__row breakdown-price__row_shiping">
+												<div class="breakdown-price__name">Shiping</div>
+												<div class="breakdown-price__value">$16.00</div>
+											</div>
+											<a href="#" class="breakdown-price__link">View shipping charge</a>
+										</div>
+										<div class="total-price-order__total-price">
+											<div class="total-price-order__label">Total</div>
+											<div class="total-price-order__value">$2,699.00</div>
+										</div>
+									</div>
+									<div class="payment-products__method payment-method">
+										<h3 class="payment-method__title">Payment Method</h3>
+										<div class="payment-method__items">
+											<div class="payment-method__item">
+												<input id="mm_1" class="payment-method__input" type="radio" value="mm-value-1" name="form[]">
+												<label for="mm_1" class="payment-method__label">
+													<span class="payment-method__content">
+														<img src="@img/payment-method.png" alt="image Method">
+													</span>
+												</label>
+											</div>
+											<div class="payment-method__item">
+												<input id="mm_2" class="payment-method__input" type="radio" value="mm-value-2" name="form[]">
+												<label for="mm_2" class="payment-method__label">
+													<span class="payment-method__content">
+														Dorect bank transfer
+													</span>
+												</label>
+											</div>
+											<div class="payment-method__item">
+												<input checked id="mm_3" class="payment-method__input" type="radio" value="mm-value-3" name="form[]">
+												<label for="mm_3" class="payment-method__label">
+													<span class="payment-method__content">
+														Cash on delivery
+													</span>
+												</label>
+											</div>
+										</div>
+										<button type="submit" class="payment-method__button button _fw">Place Order</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- checkout -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

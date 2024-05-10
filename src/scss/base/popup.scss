@@ -1,0 +1,411 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+.popup-show body::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+}
+.popup_show {
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	visibility: hidden;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: $bg-main;
+	padding: rem(25);
+	@include adaptiveValue("padding", 25, 15);
+	width: 100%;
+	max-width: rem(578);
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		@include adaptiveValue("height", 10, 5);
+		left: 0;
+		top: 100%;
+		background-color: $green-main;
+	}
+	.lock & {
+		visibility: visible;
+	}
+	.popup_search & {
+		@include adaptiveValue("padding", 35, 25);
+	}
+}
+.popup__close {
+	position: absolute;
+	right: rem(7);
+	top: rem(7);
+	width: rem(18);
+	height: rem(18);
+	font-size: rem(18);
+	color: $green-main;
+	transition: transform 0.3s cubic-bezier(0.69, 0.68, 0.67, 1.26) 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			transform: rotate(-90deg);
+		}
+	}
+}
+//=================================
+// ! authorization
+.authorization {
+	max-width: rem(300);
+	margin: 0rem auto;
+	@include adaptiveValue("padding-top", 20, 15);
+	@include adaptiveValue("padding-bottom", 33, 15);
+	// .authorization__navigation
+	&__navigation {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 53, 20);
+		}
+	}
+	// .authorization__title
+	&__title {
+		font-weight: 500;
+		font-size: rem(20);
+		line-height: math.div(16px, 20px) * 100%;
+		color: $black-light;
+		position: relative;
+		transition: all 0.3s ease 0s;
+		&:not(:last-child) {
+			margin: 0rem rem(27) 0rem 0rem;
+			&::before {
+				content: "";
+				position: absolute;
+				left: calc(100% + rem(13));
+				background-color: $black-light;
+				width: rem(1);
+				height: calc(100% - rem(4));
+				transform: translate(0px, rem(2));
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green-main;
+			}
+		}
+		&._tab-active {
+			color: $green-main;
+			pointer-events: none;
+		}
+	}
+	// .authorization__content
+	&__content {
+	}
+	// .authorization__body
+	&__body {
+	}
+	// .authorization__form
+	&__form {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 46, 20);
+		}
+	}
+	// .authorization__alternative-way
+	&__alternative-way {
+	}
+}
+
+.form-authorization {
+	// .form-authorization__title
+	&__title {
+		font-size: rem(13);
+		line-height: math.div(16px, 13px) * 100%;
+		color: $black-light;
+		&:not(:last-child) {
+			margin-bottom: rem(14);
+		}
+	}
+	// .form-authorization__input
+	&__input {
+		text-align: right;
+		&:not(:last-child) {
+			margin-bottom: rem(17);
+		}
+	}
+	// .form-authorization__line
+	&__line {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		padding: rem(10);
+		border-radius: rem(5) !important;
+		border: rem(1) solid $gray-light;
+		transition: all 0.3s ease 0s;
+		input {
+			&::placeholder {
+				color: $gray-a5;
+			}
+		}
+		&._form-focus {
+			border: rem(1) solid $green-main !important;
+		}
+		&._form-error {
+			border: rem(1) solid $error;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: rem(1) solid $green-opacity;
+			}
+		}
+	}
+	// .form-authorization__viewpass
+	&__viewpass {
+		font-size: rem(20);
+		&._viewpass-active {
+			color: $green-main;
+		}
+	}
+	// .form-authorization__link
+	&__link {
+		font-size: rem(14);
+		line-height: math.div(16px, 14px) * 100%;
+		color: $green-main;
+		padding-top: rem(14);
+		display: inline-block;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// .form-authorization__footer
+	&__footer {
+		padding-top: rem(10);
+	}
+}
+
+.alternative-way {
+	// .alternative-way__title
+	&__title {
+		display: flex;
+		align-items: center;
+		column-gap: rem(10);
+		&:not(:last-child) {
+			margin-bottom: rem(27);
+		}
+		span {
+			font-weight: 400;
+			font-size: rem(13);
+			line-height: math.div(16px, 13px) * 100%;
+			text-align: center;
+		}
+		&::after {
+			flex: 1 1 auto;
+			content: "";
+			height: rem(1);
+			background-color: $gray-light;
+		}
+		&::before {
+			flex: 1 1 auto;
+			content: "";
+			height: rem(1);
+			background-color: $gray-light;
+		}
+	}
+	// .alternative-way__button
+	&__button {
+		border: 1px solid $gray-light;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: rem(10);
+		font-weight: 500;
+		font-size: rem(13);
+		line-height: math.div(16px, 13px) * 100%;
+		text-align: center;
+		padding: rem(5) rem(15);
+		min-height: rem(40);
+		transition: all 0.3s ease 0s;
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid $green-main;
+				color: $green-main;
+				img {
+					animation: toRightFromLeft 0.5s forwards;
+				}
+			}
+		}
+	}
+}
+
+//=================================
+// ! search
+.search {
+}
+.search-form {
+	// .search-form__form
+	&__form {
+		position: relative;
+		.input {
+			padding-right: rem(40);
+		}
+	}
+	// .search-form__btn
+	&__btn {
+		position: absolute;
+		right: rem(15);
+		top: 50%;
+		transform: translate(0px, -50%);
+		font-size: rem(18);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green-main;
+			}
+		}
+	}
+}
+.input {
+}
+//=================================
+// ! preview
+.preview {
+	color: $black-light;
+
+	// .preview__title
+	&__title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 35, 22);
+		line-height: math.div(19px, 14px) * 100%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 22);
+		}
+		span {
+			text-transform: uppercase;
+			color: green;
+		}
+	}
+	// .preview__label
+	&__label {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 25, 18);
+		line-height: math.div(16px, 14px) * 100%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 22, 15);
+		}
+	}
+	// .preview__list
+	&__list {
+		list-style: none;
+		counter-reset: list-number;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 35, 22);
+		}
+	}
+	// .preview__li
+	&__li {
+		@include adaptiveValue("margin-left", 15, 8);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 15, 10);
+		}
+		&::before {
+			counter-increment: list-number;
+			content: counter(list-number) ".";
+			@include adaptiveValue("font-size", 16, 14);
+			min-width: rem(20);
+			display: inline-block;
+		}
+	}
+	// .preview__link
+	&__link {
+		@include adaptiveValue("font-size", 16, 14);
+		padding: rem(5) 0;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	// .preview__footer
+	&__footer {
+		@include adaptiveValue("font-size", 16, 14);
+		p {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 15, 10);
+			}
+		}
+		a {
+			text-decoration: underline;
+			padding: rem(5) 0;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	// .preview__tnx
+	&__tnx {
+		background-color: #f8f68c;
+		border-radius: rem(20);
+		padding: rem(10) rem(15);
+
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 10);
+		}
+	}
+	// .preview__contacts
+	&__contacts {
+		background-color: #c6faf3;
+		border-radius: rem(10);
+		padding: rem(10) rem(15);
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .preview__ruslan
+	&__ruslan {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 20, 16);
+		span {
+			display: inline-block;
+		}
+	}
+}

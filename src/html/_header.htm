@@ -1,0 +1,41 @@
+<header data-lp class="header">
+	<div class="header__container">
+		<a href="index.html" class="header__logo">
+			<img src="@img/logo.svg" alt="Logo">
+		</a>
+		<div class="header__menu menu">
+			<nav data-filter class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__item"><a data-target-link href="index.html" class="menu__link @@home ">Home</a></li>
+					<li class="menu__item"><a data-target-link href="product-view.html" class="menu__link @@shop">Shop</a></li>
+					<li class="menu__item"><a data-target-link href="product-checkout.html" class="menu__link @@plant ">Checkout</a></li>
+					<li class="menu__item"><a data-target-link href="product-cart.html" class="menu__link @@blogs ">Cart</a></li>
+				</ul>
+				<span data-target-move></span>
+			</nav>
+		</div>
+		<div data-da=".menu__body,580,1" class="header__actions actions-header">
+			<div class="actions-header__search search-form">
+				<button data-popup="#search" type="button" class="search-form__icon _icon-search"></button>
+			</div>
+			<div class="actions-header__cart cart-header">
+				<a href="product-cart.html" class="cart-header__icon _icon-cart"><span>6</span></a>
+				<div class="cart-header__body">
+					<ul class="cart-header__list cart-list"></ul>
+				</div>
+			</div>
+			<div class="actions-header__login login-header">
+				<a data-popup="#login" href="#" class="login-header__btn">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18.1601 10.1006H8.12598" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M15.7212 7.67059L18.1612 10.1006L15.7212 12.5306" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M13.6342 6.35823C13.3592 3.3749 12.2425 2.29156 7.80082 2.29156C1.88332 2.29156 1.88332 4.21656 1.88332 9.9999C1.88332 15.7832 1.88332 17.7082 7.80082 17.7082C12.2425 17.7082 13.3592 16.6249 13.6342 13.6416" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+					Login
+				</a>
+			</div>
+		</div>
+		<button type="button" class="header__icon icon-menu"><span></span></button>
+
+	</div>
+</header>

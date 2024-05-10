@@ -1,0 +1,260 @@
+// Заголовки, общие БЄМ блоки и проче...
+[data-filter] {
+	position: relative;
+}
+
+[data-target-move] {
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+	height: rem(2);
+	background-color: $green-main;
+	transition: all 0.5s ease-out;
+}
+
+[data-target-link] {
+	padding: rem(7) 0rem;
+	transition: color 0.3s ease 0s;
+	&._active {
+		color: $green-main;
+		font-weight: 700;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $green-main;
+		}
+	}
+}
+//=================================
+
+.filter {
+	position: relative;
+	overflow: auto;
+	padding-right: rem(10);
+	// .filter__list
+	&__list {
+		position: relative;
+		display: flex;
+		@include adaptiveValue("column-gap", 37, 15);
+	}
+	// .filter__item
+	&__item {
+	}
+	// .filter__link
+	&__link {
+		display: block;
+		font-size: rem(15);
+		line-height: math.div(16px, 15px) * 100%;
+		color: $black-light;
+		padding: rem(7) 0rem;
+		transition: color 0.3s ease 0s;
+		white-space: nowrap;
+		&._active {
+			color: $green-main;
+			font-weight: 700;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green-main;
+			}
+		}
+	}
+}
+
+//=================================
+.pagging {
+	display: inline-flex;
+	align-items: center;
+
+	// .pagging__list
+	&__list {
+		display: flex;
+		gap: rem(10);
+	}
+	// .pagging__item
+	&__item {
+		border: rem(1) solid $gray-e5;
+		border-radius: rem(4);
+		flex: 0 0 rem(35);
+		@include adaptiveValue("width", 35, 30);
+		@include adaptiveValue("height", 35, 30);
+		@include adaptiveValue("flex-basis", 35, 30);
+		padding: rem(5);
+		font-weight: 300;
+		font-size: rem(18);
+		transition: border 0.3s ease 0s;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $black-light;
+		&._active {
+			color: $bg-main;
+			font-weight: 700;
+			border: rem(1) solid transparent;
+			background-color: $green-main;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: rem(1) solid $green-main;
+			}
+		}
+	}
+	// .pagging__arrow
+	&__arrow {
+	}
+}
+//=================================
+.typed-cursor {
+	font-weight: 500;
+}
+//=================================
+
+.breadcrumb {
+	padding: rem(20) 0;
+	@include adaptiveValue("padding-bottom", 40, 20);
+	// .breadcrumb__container
+	&__container {
+	}
+	// .breadcrumb__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(8);
+	}
+	// .breadcrumb__item
+	&__item {
+		position: relative;
+		font-size: rem(15);
+		line-height: math.div(16px, 15px) * 100%;
+		color: $black-light;
+		&:first-child {
+			font-weight: 700;
+		}
+		&:not(:last-child) {
+			&::after {
+				content: "/";
+				margin-left: rem(8);
+				font-weight: 500;
+			}
+		}
+	}
+	// .breadcrumb__link
+	&__link {
+		transition: color 0.3s ease 0s;
+		&[href] {
+			@media (any-hover: hover) {
+				&:hover {
+					color: $green-main;
+				}
+			}
+		}
+	}
+}
+
+//=================================
+.ratings {
+	display: inline-flex;
+	column-gap: rem(2);
+	align-items: center;
+	@media (max-width: $mobile) {
+		column-gap: rem(4);
+	}
+	// .ratings__item
+	&__item {
+		font-size: rem(15);
+		color: $star;
+		// .ratings__item_gray
+		&_gray {
+			color: $gray-c4;
+		}
+		@media (max-width: $mobile) {
+			display: none;
+			&:first-child {
+				display: block;
+			}
+		}
+	}
+	// .ratings__value
+	&__value {
+		font-weight: 500;
+		color: $black-light;
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+}
+//=================================
+// filter animation
+
+[data-f-items] {
+	position: relative;
+	overflow: hidden;
+	transition: opacity 0.1s ease 0s;
+	&.animation-filter {
+		opacity: 0;
+		transition: opacity 0.5s ease 0s;
+	}
+}
+
+//=================================
+
+.about-project {
+	position: fixed;
+	bottom: 5%;
+	z-index: 50;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include adaptiveValue("right", 300, 24, 2500, 1248, 1);
+	@media (max-width: $mobileSmall) {
+		right: rem(15);
+	}
+	&__btn {
+		min-width: rem(30);
+		min-height: rem(30);
+		background-color: $green-main;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: rem(10);
+		padding: rem(15);
+		animation: a1 2.5s infinite linear;
+		// @extend .button;
+		&::before {
+			content: "Click Me";
+			font-size: rem(17);
+			color: #fff;
+			font-weight: 500;
+			letter-spacing: 0.2;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				animation-play-state: paused;
+				background-color: $green-opacity-09;
+				transition: background-color 0.3s ease 0s;
+			}
+		}
+	}
+}
+@keyframes a1 {
+	0% {
+		transform: skewY(0);
+		border-radius: rem(15) rem(15) rem(15) rem(15);
+	}
+	25% {
+		transform: skewY(3deg);
+		border-radius: rem(0) rem(15) rem(0) rem(15);
+	}
+	40% {
+		transform: skewY(0);
+		border-radius: rem(15) rem(15) rem(15) rem(15);
+	}
+	70% {
+		transform: skewY(-3deg);
+		border-radius: rem(15) rem(0) rem(15) rem(0);
+	}
+	100% {
+		transform: skewY(0);
+		border-radius: rem(15) rem(15) rem(15) rem(15);
+	}
+}

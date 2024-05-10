@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Home page"
+})
+
+<div class="transition ">
+	<span></span><span></span><span></span><span></span><span></span>
+</div>
+<div id="bg"></div>
+
+<body data-barba="wrapper">
+
+	<div data-barba="container" class="wrapper ">
+		@@include('html/_header.htm',{
+		"home":"_active",
+		"shop":"",
+		"plant":"",
+		"blogs":""
+		})
+		<main class="page ">
+			<!-- main -->
+			<section class="page__main main">
+				<div class="main__container">
+					<div class="main__wrapper">
+						<div class="main__info info-main">
+							<h4 class="info-main__subtitle">Welcome to GreenShop</h4>
+							<h1 id="type" class="info-main__title">Let’s Make a<br> Better <span>Planet</span></h1>
+							<p class="info-main__text">We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!</p>
+							<div data-da=".main__wrapper,768," class="info-main__footer">
+								<a href="#" class="info-main__btn button">SHOP NOW</a>
+							</div>
+						</div>
+						<div class="main__slider slider-main">
+							<div class="slider-main__body swiper">
+								<div class="slider-main__wrapper swiper-wrapper">
+									<div class="slider-main__slide swiper-slide">
+										<div class="slider-main__image-ibg_contain ">
+											<img src="@img/main/main-slider-image-01.png" alt="image slider big">
+										</div>
+									</div>
+									<div class="slider-main__slide swiper-slide">
+										<div class="slider-main__image-ibg_contain ">
+											<img src="@img/main/main-slider-image-02.png" alt="image slider big">
+										</div>
+									</div>
+									<div class="slider-main__slide swiper-slide">
+										<div class="slider-main__image-ibg_contain ">
+											<img src="@img/main/main-slider-image-03.png" alt="image slider big">
+										</div>
+									</div>
+									<div class="slider-main__slide swiper-slide">
+										<div class="slider-main__image-ibg_contain ">
+											<img src="@img/main/main-slider-image-04.png" alt="image slider big">
+										</div>
+									</div>
+									<div class="slider-main__slide swiper-slide">
+										<div class="slider-main__image-ibg_contain ">
+											<img src="@img/main/main-slider-image-05.png" alt="image slider big">
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div data-da=".main__slider,768," class="main__pagination pagination swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<!-- main -->
+			<!-- catalog -->
+			<section class="page__catalog catalog">
+				<div class="catalog__container">
+					<div class="catalog__wrapper">
+						<aside class="catalog__aside aside-catalog">
+							<form action="#" class="aside-catalog__filter menu-aside">
+								<div class="menu-aside__catalog">
+									<div class="menu-aside__label">Categories</div>
+									<ul class="menu-aside__list">
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link _active">House Plants<span>(33)</span></a>
+										</li>
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Potter Plants<span>(12)</span></a>
+										</li>
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Seeds<span>(65)</span></a>
+										</li>
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Small Plants<span>(39)</span></a>
+										</li>
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Big Plants<span>(23)</span></a>
+										</li>
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Succulents<span>(17)</span></a>
+										</li>
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Trerrariums<span>(19)</span></a>
+										</li>
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Gardening<span>(13)</span></a>
+										</li>
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Accessories<span>(18)</span></a>
+										</li>
+									</ul>
+								</div>
+								<div class="menu-aside__ranges">
+									<div class="menu-aside__label">Price Range</div>
+									<div class="menu-aside__range range">
+										<div id="range" class="range__body"></div>
+										<div class="range__price">
+											Price: <span><span id="rangeLowValue" class="range__start"></span> - <span id="rangeHightValue" class="range__end"></span></span>
+										</div>
+										<button type="button" class="range__button button">Filter</button>
+									</div>
+								</div>
+								<div class="menu-aside__size">
+									<div class="menu-aside__label">Size</div>
+									<ul class="menu-aside__list">
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Small<span>(119)</span></a>
+										</li>
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Mediums<span>(86)</span></a>
+										</li>
+										<li class="menu-aside__item">
+											<a href="#" class="menu-aside__link">Large<span>(78)</span></a>
+										</li>
+									</ul>
+								</div>
+							</form>
+							<a href="#" class=" aside-catalog__banner banner-aside">
+								<div class="banner-aside__sale-img">
+									<img src="@img/aside/sale.svg" alt="image super sale">
+								</div>
+								<div class="banner-aside__text">UP TO 75% OFF</div>
+								<div class="banner-aside__image-ibg_contain"><img src="@img/aside/banner.png" alt="image product"></div>
+								<div class="banner-aside__decors">
+									<div class="banner-aside__decor banner-aside__decor_1 ">
+										<img src="@img/aside/dector/1.png" alt="dector image">
+									</div>
+									<div class="banner-aside__decor banner-aside__decor_2 ">
+										<img src="@img/aside/dector/2.png" alt="dector image">
+									</div>
+									<div class="banner-aside__decor banner-aside__decor_3 ">
+										<img src="@img/aside/dector/3.png" alt="dector image">
+									</div>
+								</div>
+							</a>
+						</aside>
+						<div data-f class="catalog__body body-catalog">
+							<div class="body-catalog__header header-body-catalog">
+								<div class="header-body-catalog__mobile-btn">
+									<button type="button" class="header-body-catalog__button button  button_icon">Filter <span class="_icon-filter"><span>ON</span></span></span></button>
+								</div>
+
+								<div data-filter class="header-body-catalog__filter filter">
+									<ul class="filter__list">
+										<li class="filter__item"><a data-f-categoria="all" data-target-link href="#" class="filter__link _active">All Plant</a></li>
+										<li class="filter__item"><a data-f-categoria="new" data-target-link href="#" class="filter__link ">New Arrivals</a></li>
+										<li class="filter__item"><a data-f-categoria="sel" data-target-link href="#" class="filter__link  ">Sale</a></li>
+									</ul>
+									<span data-target-move class="target"></span>
+								</div>
+								<div class="header-body-catalog__sorting sorting-catalog">
+									<div class="sorting-catalog__label">Short by:</div>
+									<div class="sorting-catalog__select">
+										<select data-f-select name="form[]" class="form">
+											<option value="1" selected>Default sorting</option>
+											<option value="2">Popularity</option>
+											<option value="3">Lower price</option>
+											<option value="4">Higher price</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div data-f-items class="body-catalog__items">
+								<article  data-f-item="new" data-medium-zoom class="body-catalog__item item-catalog">
+									<div class="item-catalog__body">
+										<a href="#" class="item-catalog__image">
+											<img src="@img/catalog/01.png" alt=" iamge product">
+										</a>
+										<div class="item-catalog__actions actions-item">
+											<a href="product-view.html" class="actions-item__link _icon-cart"></a>
+											<a href="#" class="actions-item__link _icon-heart"></a>
+											<a data-tagret-zoom href="@img/catalog/product-card-image-01-big.jpeg" class="actions-item__link _icon-search"></a>
+										</div>
+									</div>
+									<a href="#" class="item-catalog__name">Barberton Daisy</a>
+									<div class="item-catalog__price">$119.00</div>
+								</article>
+								<article  data-f-item="new" data-medium-zoom class="body-catalog__item item-catalog">
+									<div class="item-catalog__body">
+										<a href="#" class="item-catalog__image">
+											<img src="@img/catalog/02.png" alt=" iamge product">
+										</a>
+										<div class="item-catalog__actions actions-item">
+											<a href="product-view.html" class="actions-item__link _icon-cart"></a>
+											<a href="#" class="actions-item__link _icon-heart"></a>
+											<a data-tagret-zoom href="@img/catalog/product-card-image-02-big.jpeg" class="actions-item__link _icon-search"></a>
+										</div>
+									</div>
+									<a href="#" class="item-catalog__name">Angel Wing Begonia</a>
+									<div class="item-catalog__price">$169.00</div>
+								</article>
+								<article  data-f-item="sel" data-medium-zoom class="body-catalog__item item-catalog">
+									<div class="item-catalog__body">
+										<a href="#" class="item-catalog__image">
+											<img src="@img/catalog/03.png" alt=" iamge product">
+										</a>
+										<div class="item-catalog__actions actions-item">
+											<a href="product-view.html" class="actions-item__link _icon-cart"></a>
+											<a href="#" class="actions-item__link _icon-heart"></a>
+											<a data-tagret-zoom href="@img/catalog/product-card-image-03-big.jpeg" class="actions-item__link _icon-search"></a>
+										</div>
+										<span class="item-catalog__sale">13% OFF</span>
+									</div>
+									<a href="#" class="item-catalog__name">African Violet</a>
+									<div class="item-catalog__price">$199.00 <span class="item-catalog__old-price">$229.00</span></div>
+								</article>
+								<article data-f-item="sel" data-medium-zoom class="body-catalog__item item-catalog">
+									<div class="item-catalog__body">
+										<a href="#" class="item-catalog__image">
+											<img src="@img/catalog/04.png" alt=" iamge product">
+										</a>
+										<div class="item-catalog__actions actions-item">
+											<a href="product-view.html" class="actions-item__link _icon-cart"></a>
+											<a href="#" class="actions-item__link _icon-heart"></a>
+											<a data-tagret-zoom href="@img/catalog/product-card-image-04-big.jpeg" class="actions-item__link _icon-search"></a>
+										</div>
+										<span class="item-catalog__sale">13% OFF</span>
+									</div>
+									<a href="#" class="item-catalog__name">Beach Spider Lily</a>
+									<div class="item-catalog__price">$198.00 <span class="item-catalog__old-price">$229.00</span></div>
+								</article>
+								<article data-f-item="new" data-medium-zoom class="body-catalog__item item-catalog">
+									<div class="item-catalog__body">
+										<a href="#" class="item-catalog__image">
+											<img src="@img/catalog/05.png" alt=" iamge product">
+										</a>
+										<div class="item-catalog__actions actions-item">
+											<a href="product-view.html" class="actions-item__link _icon-cart"></a>
+											<a href="#" class="actions-item__link _icon-heart"></a>
+											<a data-tagret-zoom href="@img/catalog/product-card-image-05-big.jpeg" class="actions-item__link _icon-search"></a>
+										</div>
+									</div>
+									<a href="#" class="item-catalog__name">Blushing Bromeliad</a>
+									<div class="item-catalog__price">$139.00</div>
+								</article>
+								<article data-f-item="new" data-medium-zoom class="body-catalog__item item-catalog">
+									<div class="item-catalog__body">
+										<a href="#" class="item-catalog__image">
+											<img src="@img/catalog/06.png" alt=" iamge product">
+										</a>
+										<div class="item-catalog__actions actions-item">
+											<a href="product-view.html" class="actions-item__link _icon-cart"></a>
+											<a href="#" class="actions-item__link _icon-heart"></a>
+											<a data-tagret-zoom href="@img/catalog/product-card-image-06-big.jpeg" class="actions-item__link _icon-search"></a>
+										</div>
+									</div>
+									<a href="#" class="item-catalog__name">Aluminum Plant</a>
+									<div class="item-catalog__price">$170.00</div>
+								</article>
+								<article data-f-item="sel" data-medium-zoom class="body-catalog__item item-catalog">
+									<div class="item-catalog__body">
+										<a href="#" class="item-catalog__image">
+											<img src="@img/catalog/07.png" alt=" iamge product">
+										</a>
+										<div class="item-catalog__actions actions-item">
+											<a href="product-view.html" class="actions-item__link _icon-cart"></a>
+											<a href="#" class="actions-item__link _icon-heart"></a>
+											<a data-tagret-zoom href="@img/catalog/product-card-image-07-big.jpeg" class="actions-item__link _icon-search"></a>
+										</div>
+										<span class="item-catalog__sale">13% OFF</span>
+									</div>
+									<a href="#" class="item-catalog__name">Bird's Nest Fern</a>
+									<div class="item-catalog__price">$189.00 <span class="item-catalog__old-price">$229.00</span></div>
+								</article>
+								<article data-f-item="new" data-medium-zoom class="body-catalog__item item-catalog">
+									<div class="item-catalog__body">
+										<a href="#" class="item-catalog__image">
+											<img src="@img/catalog/08.png" alt=" iamge product">
+										</a>
+										<div class="item-catalog__actions actions-item">
+											<a href="product-view.html" class="actions-item__link _icon-cart"></a>
+											<a href="#" class="actions-item__link _icon-heart"></a>
+											<a data-tagret-zoom href="@img/catalog/product-card-image-08-big.jpeg" class="actions-item__link _icon-search"></a>
+										</div>
+									</div>
+									<a href="#" class="item-catalog__name">Broadleaf Lady Palm</a>
+									<div class="item-catalog__price">$39.00</div>
+								</article>
+								<article data-f-item="new" data-medium-zoom class="body-catalog__item item-catalog">
+									<div class="item-catalog__body">
+										<a href="#" class="item-catalog__image">
+											<img src="@img/catalog/09.png" alt=" iamge product">
+										</a>
+										<div class="item-catalog__actions actions-item">
+											<a href="product-view.html" class="actions-item__link _icon-cart"></a>
+											<a href="#" class="actions-item__link _icon-heart"></a>
+											<a data-tagret-zoom href="@img/catalog/product-card-image-09-big.jpeg" class="actions-item__link _icon-search"></a>
+										</div>
+									</div>
+									<a href="#" class="item-catalog__name">Chinese Evergreen</a>
+									<div class="item-catalog__price">$59.00</div>
+								</article>
+							</div>
+							<div class="body-catalog__pagging">
+								<div class="pagging">
+									<ul class="pagging__list">
+										<li>
+											<a href="#" class="pagging__item  _active">1</a>
+										</li>
+										<li>
+											<a href="#" class="pagging__item ">2</a>
+										</li>
+										<li>
+											<a href="#" class="pagging__item ">3</a>
+										</li>
+										<li>
+											<a href="#" class="pagging__item ">4</a>
+										</li>
+										<li>
+											<a href="#" class="pagging__item pagging__arrow   _icon-arrow-right"></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- catalog -->
+			
+			<!-- banners -->
+			<section class="page__banners banners">
+				<div class="banners__container">
+					<div class="banners__wrapper">
+						<div class="banners__item banner">
+							<div class="banner__body">
+								<div class="banner__image-ibg_contain">
+									<img src="@img/banners/01.png" alt="banner">
+								</div>
+								<div class="banner__info">
+									<h4 class="banner__title">Summer cactus <br>
+										& succulents</h4>
+									<p class="banner__descr">We are an online plant shop offering a wide range of cheap and trendy plants</p>
+									<a href="#" class="banner__link button button_icon _icon-arrow-more">Find More</a>
+								</div>
+							</div>
+						</div>
+						<div class="banners__item banner">
+							<div class="banner__body">
+								<div class="banner__image-ibg_contain">
+									<img src="@img/banners/02.png" alt="banner">
+								</div>
+								<div class="banner__info">
+									<h4 class="banner__title">Styling Trends <br>
+										& much more</h4>
+									<p class="banner__descr">We are an online plant shop offering a wide range of cheap and trendy plants</p>
+									<a href="#" class="banner__link button button_icon _icon-arrow-more">Find More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- banners -->
+			<!-- blog-post -->
+			<section class="page__blog-post blog-post">
+				<div class="blog-post__container">
+					<div class="blog-post__header">
+						<h3 class="blog-post__title">Our Blog Posts</h3>
+						<p class="blog-post__descr">We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+					</div>
+					<div class="blog-post__items">
+						<article class="blog-post__item item-blog-post">
+							<div class="item-blog-post__image">
+								<img src="@img/blog-post/01.jpg" alt="image post ">
+							</div>
+							<div class="item-blog-post__body">
+								<div class="item-blog-post__info"><span class="item-blog-post__date">September 12</span> <span class="item-blog-post__read">Read in 6 minutes</span></div>
+								<a href="#" class="item-blog-post__title">Cactus & Succulent <br> Care Tips</a>
+								<p class="item-blog-post__text">Cacti are succulents are easy care plants for any home or patio.</p>
+								<a href="#" class="item-blog-post__link _icon-arrow-more">Read More </a>
+							</div>
+						</article>
+						<article class="blog-post__item item-blog-post">
+							<div class="item-blog-post__image">
+								<img src="@img/blog-post/02.jpg" alt="image post ">
+							</div>
+							<div class="item-blog-post__body">
+								<div class="item-blog-post__info"><span class="item-blog-post__date">September 13</span> <span class="item-blog-post__read">Read in 2 minutes</span></div>
+								<a href="#" class="item-blog-post__title">Top 10 Succulents for <br>
+									Your Home</a>
+								<p class="item-blog-post__text">Best in hanging baskets. Prefers medium to high light.</p>
+								<a href="#" class="item-blog-post__link _icon-arrow-more">Read More</a>
+							</div>
+						</article>
+						<article class="blog-post__item item-blog-post">
+							<div class="item-blog-post__image">
+								<img src="@img/blog-post/03.jpg" alt="image post ">
+							</div>
+							<div class="item-blog-post__body">
+								<div class="item-blog-post__info"><span class="item-blog-post__date">September 15</span> <span class="item-blog-post__read">Read in 3 minutes</span></div>
+								<a href="#" class="item-blog-post__title">Cacti & Succulent <br>
+									Care Tips</a>
+								<p class="item-blog-post__text">Cacti and succulents thrive in containers and because most are..Cacti and succulents thrive in containers and because most are..</p>
+								<a href="#" class="item-blog-post__link _icon-arrow-more">Read More</a>
+							</div>
+						</article>
+						<article class="blog-post__item item-blog-post">
+							<div class="item-blog-post__image">
+								<img src="@img/blog-post/04.jpg" alt="image post ">
+							</div>
+							<div class="item-blog-post__body">
+								<div class="item-blog-post__info"><span class="item-blog-post__date">September 15</span> <span class="item-blog-post__read">Read in 3 minutes</span></div>
+								<a href="#" class="item-blog-post__title">Best Houseplants <br>
+									Room by Room</a>
+								<p class="item-blog-post__text">The benefits of houseplants are endless. In addition to..</p>
+								<a href="#" class="item-blog-post__link _icon-arrow-more">Read More</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- blog-post -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

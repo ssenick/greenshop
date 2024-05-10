@@ -1,0 +1,4 @@
+flsStartTemplate/
+node_modules/
+**/*.zip
+**/*.rar

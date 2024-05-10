@@ -1,0 +1,54 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	overflow: hidden;
+	column-gap: rem(4);
+	color: $bg-main;
+	padding: rem(7) rem(25);
+	background-color: $green-main;
+	font-weight: 700;
+	font-size: rem(16);
+	border-radius: rem(6);
+	line-height: math.div(20, 16);
+	transition: all 0.3s ease 0s;
+	border: rem(2) solid transparent;
+	min-height: rem(40);
+	&_big {
+		font-weight: 700;
+		font-size: rem(16);
+		min-height: rem(45);
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+	}
+	&_border{
+		color: $green-main;
+		background-color: $bg-main;
+		border: rem(2) solid $green-main;
+	}
+	&_icon {
+		flex-direction: row-reverse;
+		&::before {
+			font-size: rem(16);
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			border: rem(2) solid $black-light;
+			color: $black-light;
+			background-color: transparent;
+			&::before {
+				animation: toRightFromLeft 0.5s forwards;
+			}
+		}
+	}
+	&._fw {
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+	}
+}
