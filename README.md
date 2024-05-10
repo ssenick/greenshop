@@ -58,4 +58,4 @@ List of third-party libraries and frameworks used in the project:
 - **webp-converter**: Utility for converting images to WebP format.
 
 
-![Screenshot](https://github.com/ssenick/backmymoney/blob/main/backmymoney.jpeg)
+![Screenshot](https://github.com/ssenick/greenshop/blob/main/greenshop.jpeg)
